@@ -1,0 +1,38 @@
+{
+  "app-id": "org.zealdocs.Zeal",
+  "runtime": "org.kde.Platform",
+  "runtime-version": "5.10",
+  "sdk": "org.kde.Sdk",
+  "command": "zeal",
+  "rename-desktop-file": "zeal.desktop",
+  "rename-icon": "zeal",
+  "finish-args": [
+    "--socket=x11",
+    "--share=network",
+    "--socket=wayland",
+    "--filesystem=host",
+    "--filesystem=~/.local/share/flatpak",
+    "--filesystem=/var/lib/flatpak",
+    "--device=dri"
+  ],
+  "modules": [
+    "qtwebkit.json",
+    {
+      "name": "zeal",
+      "config-opts": [
+        "-DENABLE_TESTING=OFF",
+        "-DCMAKE_INSTALL_LIBDIR=lib",
+        "-DQt5WebKit_DIR=/app/lib/cmake/Qt5WebKit/",
+        "-DQt5WebKitWidgets_DIR=/app/lib/cmake/Qt5WebKitWidgets/"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/zealdocs/zeal/releases/download/v0.6.0/zeal-0.6.0.tar.gz",
+          "sha256": "04f92900ea2cc409976742f1b7f63943164889c1f91cad789516e894eeae1aff"
+        }
+      ],
+      "buildsystem": "cmake"
+    }
+  ]
+}
