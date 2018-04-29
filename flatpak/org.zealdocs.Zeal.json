@@ -32,9 +32,9 @@
       ],
       "sources": [
         {
-          "type": "archive",
-          "url": "https://github.com/zealdocs/zeal/releases/download/v0.6.0/zeal-0.6.0.tar.gz",
-          "sha256": "04f92900ea2cc409976742f1b7f63943164889c1f91cad789516e894eeae1aff"
+          "type": "git",
+          "url": "https://github.com/zealdocs/zeal.git",
+          "tag": "v0.6.0"
         }
       ],
       "buildsystem": "cmake"
