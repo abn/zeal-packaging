@@ -5,13 +5,13 @@
   "sdk": "org.kde.Sdk",
   "command": "zeal",
   "rename-desktop-file": "zeal.desktop",
+  "rename-appdata-file": "zeal.appdata.xml",
   "rename-icon": "zeal",
   "finish-args": [
     "--share=ipc",
     "--socket=x11",
     "--share=network",
     "--socket=wayland",
-    "--filesystem=host",
     "--device=dri"
   ],
   "cleanup": [
