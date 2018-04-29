@@ -12,8 +12,6 @@
     "--share=network",
     "--socket=wayland",
     "--filesystem=host",
-    "--filesystem=~/.local/share/flatpak",
-    "--filesystem=/var/lib/flatpak",
     "--device=dri"
   ],
   "cleanup": [
